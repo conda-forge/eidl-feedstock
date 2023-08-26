@@ -1,5 +1,5 @@
 {% set name = "eidl" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/haasad/EcoInventDownLoader/archive/{{ version }}.tar.gz
-  sha256: 76c49f32da9b64b26d457caee7c9c36e81d3edcde165f9ec3794a433205ff4a0
+  sha256: 6d6d5735b96c5e7abea7353faae51cb0d916f5779b79d12ba649f4985fc7d732
 
 build:
   noarch: python
