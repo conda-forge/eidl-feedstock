@@ -23,7 +23,6 @@ requirements:
     - setuptools
   run:
     - appdirs
-    - beautifulsoup4
     - bw2data
     - bw2io
     - py7zr
