@@ -1,5 +1,5 @@
 {% set name = "eidl" %}
-{% set version = "1.5.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/haasad/EcoInventDownLoader/archive/{{ version }}.tar.gz
-  sha256: 58ce4ac0e7c5285ec5d7688d0ca6837d1a9feaa43ce4ac0cacd6c046495ba6e1
+  sha256: 76c49f32da9b64b26d457caee7c9c36e81d3edcde165f9ec3794a433205ff4a0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - get_ecoinvent = eidl.core:get_ecoinvent_cli
 
