@@ -12,24 +12,26 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - get_ecoinvent = eidl.core:get_ecoinvent_cli
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
     - appdirs
     - bw2data
     - bw2io
     - py7zr
-    - python >=3.6
+    - python >={{ python_min }}
     - requests
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - eidl
   # No test of get_ecoinvent as no --help or --version available
